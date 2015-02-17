@@ -1,0 +1,40 @@
+TXP-JSI is a recent idea that I have been working out in basic psuedocode until now. The idea is to allow JS coders to access low-level, powerful functions via use of C/C++. In other words, JS/JQuery would have some of the same power as other application programming languages. The process of function execution would go as follows: 
+
+.js script includes function from TXP-JSI. The function (in the .js library) creates an invisible form, and sends the function parameters to CGI C/C++ (POST method). 
+
+The CGI C/C++ receives the function parameters, and processes the request. When the function finishes execution on server-side, the result(s) are output to a standard, rewritable output file. 
+
+The .js script reads the output file when CGI alerts .js of completion (tells .js to stop "sleep"). The output is available for further processing to the .js script... 
+
+Due to TXP-JSI's inherent low-level nature, it could be modified for client-side use as well...
+
+To use TXPJSI, simply compile TXPJSI to a binary, with the .cgi extension. Store it where ever you wish, along with TXPJSI.js (they have to be in the same location). Once you have the compiled binary, include TXPJSI.js in your webpage. You now have access to some of C++'s file operations! If this beta works, I will attempt to update it. If not, I will perform bug fixes ASAP. Contact me to report issues at:
+TopHatProductions115@gmail.com
+
+NOTE: Requires GNU's CGI C++ library to work properly...
+
+Usage (when script src = TXPJSI.js):
+
+TXPJSI(operation, object);
+
+A List of accepted case variables:
+
+detectObject
+removeObject
+copyObject
+pasteObject
+moveObject	syntax: initial src|terminal src
+createObject	syntax: intended path|object name
+renameObject	syntax: object path name|intended path label
+getInfo
+sysUsage
+Objectsearch	syntax: query|object type/time frame (within 7 OR more than 7)
+dirList
+prgOpen  	Please enter the full path and name for the executable. Be sure to include any desired passable arguments and parameters when doing so.
+newThreadPool       syntax: max number of threads
+killThreadPool          
+pauseThreadmain    
+inflateThreadpool      syntax: number of additional desired threads
+releaseThreadpool_kill
+callNativebinarytoPool          syntax: name of TXP-JSI native function
+DynamicFileCompiler            syntax: desired name and path for file|file content
