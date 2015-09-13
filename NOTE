@@ -11,7 +11,8 @@ Due to TXP-JSI's inherent low-level nature, it could be modified for client-side
 To use TXPJSI, simply compile TXPJSI to a binary, with the .cgi extension. Store it where ever you wish, along with TXPJSI.js (they have to be in the same location). Once you have the compiled binary, include TXPJSI.js in your webpage. You now have access to some of C++'s file operations! If this beta works, I will attempt to update it. If not, I will perform bug fixes ASAP. Contact me to report issues at:
 TopHatProductions115@gmail.com
 
-NOTE: Requires GNU's CGI C++ library to work properly...
+NOTE: Requires GNU's CGI C++ library and Bilash's Threading API to work properly...
+https://github.com/bilash/threadpool
 
 Usage (when script src = TXPJSI.js):
 
