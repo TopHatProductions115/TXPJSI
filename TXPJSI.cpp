@@ -1,41 +1,22 @@
 #include <iostream>
-
 #include <cstdafx>
-
 #include <cstdio>
-
 #include <cstdlib>
-
 #include <string>
-
 #include <cstring>
-
 #include <cstdarg>
-
 #include <ctime>
-
 #include <sstream>
-
 #include <fstream>
-
 #include <algorithm>
-
 #include <dirent.h>
-
 #include <vector>
-
 #include <sys/stat.h>
-
 #include <sys/socket.h>
-
 #include <sys/types.h>
-
 #include <unistd.h>
-
 #include <errno.h>
-
-#include <thread>    
-
+#include <thread>
 #include <chrono>   
 
 #include "cgicc/CgiDefs.h"
@@ -254,7 +235,7 @@ long   ru_msgrcv;        /* IPC messages received */
 long   ru_nsignals;      /* signals received */
 }
 
-cout<<"Gathering: /proc/self/ CPU Usage values...
+cout<<"Gathering: /proc/self/ CPU Usage values...";
 
 static string memory_usage()
 {
@@ -548,79 +529,79 @@ void switcher ( object, operation )
 {
 switch (operation)
 {
-case detectObject:
+case "detectObject":
 Object_exists( object );
 break;
 
-case removeObject:
+case "removeObject":
 copy_Object( object );
 break;
 
-case copyObject:
+case "copyObject":
 copy_Object( object );
 break;
 
-case pasteObject:
+case "pasteObject":
 paste_Object( object );
 break;
 
-case moveObject:
+case "moveObject":
 move_Object( object );
 break;
 
-case createObject:
+case "createObject":
 new_Object( object );
 break;
 
-case renameObject:
+case "renameObject":
 rename_Object( object );
 break;
 
-case getInfo:
+case "getInfo":
 get_Object_info();
 break;
 
-case sysUsage:
+case "sysUsage":
 read_sys_usage();
 break;
 
-case Objectsearch:
+case "Objectsearch":
 file_Search( object );
 break;
 
-case dirList:
+case "dirList":
 dir_List( object );
 break;
 
-case prgOpen:
+case "prgOpen":
 prgopen( object );
 break;
 
-case newThreadPool:
+case "newThreadPool":
 new_Threadpool( object );
 break;
 
-case killThreadPool:
+case "killThreadPool":
 kill_Threadpool( object );
 break;
 
-case pauseThreadmain:
+case "pauseThreadmain":
 pause_mainThread( object );
 break;
 
-case inflateThreadpool:
+case "inflateThreadpool":
 increase_ThreadpoolSize( object );
 break;
 
-case releaseThreadpool_kill:
+case "releaseThreadpool_kill":
 release_ThreadpoolResources( object );
 break;
 
-case callNativebinarytoPool:
+case "callNativebinarytoPool":
 add_FunctionToPool( object );
 break;
 
-case DynamicFileCompiler:
+case "DynamicFileCompiler":
 exec_tempBinary( object );
 break;
 
